@@ -9,6 +9,7 @@ import 'package:media_design_assingment_app/modules/order/providers/order_notife
 import 'package:media_design_assingment_app/utils/constants/app_colors.dart';
 import 'package:media_design_assingment_app/utils/constants/app_strings.dart';
 import 'package:media_design_assingment_app/utils/constants/app_text_styles.dart';
+import 'package:media_design_assingment_app/utils/extensions/space_extension.dart';
 import 'package:media_design_assingment_app/utils/helping_methods/helping_methods.dart';
 import 'package:media_design_assingment_app/widgets/primary_button.dart';
 
@@ -115,7 +116,7 @@ class _EditProductSheetState extends ConsumerState<EditProductSheet> {
                           color: AppColors.blue,
                         ),
                       ),
-                      const SizedBox(height: 20),
+                      20.vertical,
                       TextField(
                         onTapOutside: (_) => hideKeyboard(),
                         controller: _notesController,
@@ -133,7 +134,7 @@ class _EditProductSheetState extends ConsumerState<EditProductSheet> {
                         ),
                         maxLines: 3,
                       ),
-                      const SizedBox(height: 20),
+                      20.vertical,
                       Row(
                         children: [
                           if (_editedProduct.imagePath != null &&
@@ -168,7 +169,7 @@ class _EditProductSheetState extends ConsumerState<EditProductSheet> {
                           ),
                         ],
                       ),
-                      const SizedBox(height: 16),
+                      16.vertical,
                       PrimaryButton(
                         onPressed: _saveChanges,
                         text: AppStrings.save,
